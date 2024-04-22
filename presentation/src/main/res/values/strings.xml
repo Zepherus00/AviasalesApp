@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">StoreApp</string>
+    <string name="title_tickets_main_menu">Авиабилеты</string>
+    <string name="title_hotels_main_menu">Отели</string>
+    <string name="title_shorts_main_menu">Короче</string>
+    <string name="title_subscribes_main_menu">Подписки</string>
+    <string name="title_profile_main_menu">Профиль</string>
+    <string name="title_frg_tickets">Поиск дешевых\n авиабилетов</string>
+    <string name="title_rv_frg_tickets">Музыкально отлететь</string>
+    <string name="price_with_currency">%1$s ₽</string>
+</resources>

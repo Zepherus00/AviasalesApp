@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/ticketsFragment"
+        android:icon="@drawable/ic_plane"
+        android:title="@string/title_tickets_main_menu" />
+
+    <item
+        android:id="@+id/hotelsFragment"
+        android:icon="@drawable/ic_hotels"
+        android:title="@string/title_hotels_main_menu" />
+
+    <item
+        android:id="@+id/shortsFragment"
+        android:icon="@drawable/ic_shorts"
+        android:title="@string/title_shorts_main_menu" />
+
+    <item
+        android:id="@+id/subscribesFragment"
+        android:icon="@drawable/ic_subscribes"
+        android:title="@string/title_subscribes_main_menu" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/title_profile_main_menu" />
+</menu>

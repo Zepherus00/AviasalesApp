@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_grey_1_r8"
+        android:orientation="vertical"
+        android:paddingBottom="24dp">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/price_rv_flight"
+            style="@style/title_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="6990 Р" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_circle_rv_ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@drawable/ic_circle_white"
+            android:tint="@color/red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/price_rv_flight" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/time_start_rv_flight"
+            style="@style/title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="-2dp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toTopOf="@+id/ic_circle_rv_ticket"
+            app:layout_constraintStart_toEndOf="@id/ic_circle_rv_ticket"
+            app:layout_constraintTop_toTopOf="@id/ic_circle_rv_ticket"
+            tools:text="03:15 - " />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/airport_start_rv_flight"
+            style="@style/title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="-2dp"
+            android:textColor="@color/grey_6"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@id/ic_circle_rv_ticket"
+            app:layout_constraintStart_toEndOf="@id/ic_circle_rv_ticket"
+            app:layout_constraintTop_toBottomOf="@id/ic_circle_rv_ticket"
+            tools:text="VKO" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/time_end_rv_flight"
+            style="@style/title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@id/time_start_rv_flight"
+            app:layout_constraintTop_toTopOf="@id/time_start_rv_flight"
+            tools:text="07:10" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/airport_end_rv_flight"
+            style="@style/title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_6"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="@id/ic_circle_rv_ticket"
+            app:layout_constraintStart_toStartOf="@id/time_end_rv_flight"
+            app:layout_constraintTop_toBottomOf="@id/ic_circle_rv_ticket"
+            tools:text="AER" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/more_info_rv_flight"
+            style="@style/title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toEndOf="@id/time_end_rv_flight"
+            app:layout_constraintTop_toTopOf="@id/time_end_rv_flight"
+            tools:text="4ч в пути" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/transfer_rv_flight"
+            style="@style/title_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintStart_toEndOf="@id/more_info_rv_flight"
+            app:layout_constraintTop_toTopOf="@id/more_info_rv_flight"
+            tools:text="/ Без пересадок" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/special_info_rv_flight"
+        style="@style/title_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_blue_r8"
+        android:paddingHorizontal="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Самый удобный" />
+</FrameLayout>

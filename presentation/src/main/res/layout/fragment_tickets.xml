@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/layoutMatchStyle"
+    android:background="@color/black">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_tickets_frg"
+        style="@style/titleFragment"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:text="@string/title_frg_tickets"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <FrameLayout
+        android:id="@+id/input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_grey_3_r16"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_tickets_frg">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@drawable/bg_grey_4_r16"
+            android:elevation="4dp"
+            android:paddingBottom="4dp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ic_search_tickets_frg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_search"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/line_tickets_frg"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="16dp"
+                android:background="@color/grey_5"
+                app:layout_constraintBottom_toBottomOf="@id/ic_search_tickets_frg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ic_search_tickets_frg"
+                app:layout_constraintTop_toTopOf="@id/ic_search_tickets_frg" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/from_frg_tickets"
+                style="@style/button_text_1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_grey_4_r16"
+                android:hint="Откуда - Москва"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_6"
+                app:layout_constraintBottom_toTopOf="@id/line_tickets_frg"
+                app:layout_constraintEnd_toEndOf="@id/line_tickets_frg"
+                app:layout_constraintStart_toStartOf="@id/line_tickets_frg" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/in_frg_tickets"
+                style="@style/button_text_1"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_grey_4_r16"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="Куда - Турция"
+                android:textColor="@color/white"
+                android:textColorHint="@color/grey_6"
+                app:layout_constraintEnd_toEndOf="@id/line_tickets_frg"
+                app:layout_constraintStart_toStartOf="@id/line_tickets_frg"
+                app:layout_constraintTop_toBottomOf="@id/line_tickets_frg" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/title_rv_tickets_frg"
+        style="@style/titleFragment"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/title_rv_frg_tickets"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_view" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_frg_tickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_rv_tickets_frg"
+        tools:itemCount="3"
+        tools:listitem="@layout/rv_poster_item" />
+
+    <ProgressBar
+        android:id="@+id/progress_frg_tickets"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_rv_tickets_frg" />
+</androidx.constraintlayout.widget.ConstraintLayout>

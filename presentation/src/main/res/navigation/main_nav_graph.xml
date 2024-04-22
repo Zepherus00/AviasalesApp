@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/ticketsFragment">
+
+    <fragment
+        android:id="@+id/ticketsFragment"
+        android:name="com.example.storeapp.presentation.menu.tickets.TicketsFragment"
+        android:label="fragment_tickets"
+        tools:layout="@layout/fragment_tickets">
+        <action
+            android:id="@+id/action_ticketsFragment_to_flightsFragment"
+            app:destination="@id/flightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allTicketsFragment"
+        android:name="com.example.storeapp.presentation.menu.tickets.AllTicketsFragment"
+        android:label="AllTicketsFragment"
+        tools:layout="@layout/fragment_all_tickets">
+        <action
+            android:id="@+id/action_allTicketsFragment_to_flightsFragment"
+            app:destination="@id/flightsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flightsFragment"
+        android:name="com.example.storeapp.presentation.menu.tickets.FlightsFragment"
+        android:label="FlightsFragment"
+        tools:layout="@layout/fragment_flights">
+        <action
+            android:id="@+id/action_flightsFragment_to_ticketsFragment"
+            app:destination="@id/ticketsFragment" />
+        <action
+            android:id="@+id/action_flightsFragment_to_allTicketsFragment"
+            app:destination="@id/allTicketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.storeapp.presentation.menu.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/hotelsFragment"
+        android:name="com.example.storeapp.presentation.menu.hotels.HotelsFragment"
+        android:label="fragment_hotels"
+        tools:layout="@layout/fragment_hotels" />
+    <fragment
+        android:id="@+id/subscribesFragment"
+        android:name="com.example.storeapp.presentation.menu.subscribes.SubscribesFragment"
+        android:label="fragment_subscribes"
+        tools:layout="@layout/fragment_subscribes" />
+    <fragment
+        android:id="@+id/shortsFragment"
+        android:name="com.example.storeapp.presentation.menu.shorts.ShortsFragment"
+        android:label="fragment_shorts"
+        tools:layout="@layout/fragment_shorts" />
+</navigation>
